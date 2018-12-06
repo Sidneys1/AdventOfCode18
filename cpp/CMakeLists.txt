@@ -3,6 +3,8 @@ project(aoc VERSION 0.1.0)
 
 set_property(GLOBAL PROPERTY CXX_STANDARD 17)
 
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+
 MACRO(SUBDIRLIST result curdir prefix)
   FILE(GLOB children RELATIVE ${curdir} ${curdir}/${prefix}*)
   SET(dirlist "")
