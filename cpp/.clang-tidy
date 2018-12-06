@@ -1,0 +1,9 @@
+---
+Checks:          '*,-fuchsia*'
+WarningsAsErrors: ''
+HeaderFilterRegex: '.*'
+AnalyzeTemporaryDtors: true
+FormatStyle:     file
+User:            sidneys1
+...
+
