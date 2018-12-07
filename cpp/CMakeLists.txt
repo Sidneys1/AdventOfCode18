@@ -4,6 +4,8 @@ project(aoc VERSION 0.1.0)
 set_property(GLOBAL PROPERTY CXX_STANDARD 17)
 
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -Wextra -pedantic")
+set(CMAKE_CXX_CLANG_TIDY "clang-tidy;-p=${CMAKE_CURRENT_BINARY_DIR};-quiet")
 
 MACRO(SUBDIRLIST result curdir prefix)
   FILE(GLOB children RELATIVE ${curdir} ${curdir}/${prefix}*)

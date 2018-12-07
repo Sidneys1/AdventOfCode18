@@ -7,8 +7,6 @@ int main(int /* unused */, char ** /* unused */) {
     std::string input;
 
     int64_t doubles = 0, triples = 0;
-
-    int64_t twos = 0, threes = 0;
     while (true) {
         std::cin >> input;
         if (!std::cin) {
@@ -27,13 +25,13 @@ int main(int /* unused */, char ** /* unused */) {
             switch (count) {
             case 2: {
                 if (!got_two) {
-                    twos += 1;
+                    doubles += 1;
                     got_two = true;
                 }
             } break;
             case 3: {
                 if (!got_three) {
-                    threes += 1;
+                    triples += 1;
                     got_three = true;
                 }
             } break;
@@ -43,5 +41,5 @@ int main(int /* unused */, char ** /* unused */) {
         }
     }
 
-    std::cout << "The hash is: " << twos * threes << std::endl;
+    std::cout << "The hash is: " << doubles * triples << std::endl;
 }
